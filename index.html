@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<title>Clock</title>
+	<style>
+		* {
+			font-family: "Concert One";
+		}
+
+		body {
+			height: 100vh;
+			background-image: linear-gradient(to bottom, #434343 0%, black 100%);
+		}
+
+		.clock {
+			width: 300px;
+			height: 300px;
+			border-radius: 300px;
+			border: 8px solid black;
+			box-shadow: 9px 13px 20px rgba(0, 0, 0, 0.8), 0 0 4px #222,
+				0 -3px 122px #555 inset;
+			background-image: radial-gradient(grey, white);
+			position: relative;
+			margin: auto;
+		}
+
+		.clock:after {
+			content: "";
+			width: 15px;
+			height: 15px;
+			border-radius: 10px;
+			background: grey;
+			position: absolute;
+			left: 47.5%;
+			top: 48.5%;
+		}
+
+		.numbers div {
+			position: absolute;
+			font-size: 2rem;
+		}
+
+		.twelve {
+			top: 0.5rem;
+			left: 44%;
+		}
+
+		.three {
+			top: 44%;
+			right: 1rem;
+		}
+
+		.three::after {
+			content: "4";
+			width: 25px;
+			position: absolute;
+			bottom: -65px;
+			right: 20px;
+			color: black;
+		}
+
+		.six {
+			bottom: 0.5rem;
+			left: 47%;
+		}
+
+		.nine {
+			top: 44%;
+			left: 1rem;
+		}
+
+		.pointers div {
+			position: absolute;
+			border-radius: 50% 50% 0 0;
+			box-shadow: 0.2rem 0.2rem 0.5rem grey;
+			transform-origin: bottom;
+		}
+
+		.sec {
+			height: 45%;
+			left: 49%;
+			bottom: 49%;
+			width: 0.3rem;
+			background: red;
+			box-shadow: 0 1 0 1 white, 0 1px 0 1px #444;
+
+			-webkit-animation: 60s steps(60) tick infinite;
+			-moz-animation: 60s steps(60) tick infinite;
+		}
+
+		.min {
+			height: 37%;
+			left: 49%;
+			bottom: 49%;
+			width: 0.4rem;
+			background: black;
+
+			-webkit-animation: 3600s steps(60) tick infinite;
+			-moz-animation: 3600s steps(60) tick infinite;
+		}
+
+		.hrs {
+			height: 30%;
+			left: 49%;
+			bottom: 49%;
+			width: 0.4rem;
+			background: black;
+
+			-webkit-transform: rotate(90deg);
+			-moz-transform: rotate(90deg);
+
+			-webkit-animation: 43200s linear tick infinite;
+			-moz-animation: 43200s linear tick infinite;
+		}
+
+		@-webkit-keyframes tick {
+			to {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+
+		#-moz-keyframes tick {
+			to {
+				-moz-transform: rotate(360deg);
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<h1 class="text-center">Clock</h1>
+	<div class='clock'>
+		<div class='numbers'>
+			<div class='twelve'>12</div>
+			<div class='three'>3</div>
+			<div class='six'>6</div>
+			<div class='nine'>9</div>
+		</div>
+		<div class='pointers'>
+			<div class='sec'></div>
+			<div class='min'></div>
+			<div class='hrs'></div>
+		</div>
+	</div>
+
+	<script>
+
+
+	</script>
+</body>
+
+</html>
